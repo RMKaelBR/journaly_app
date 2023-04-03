@@ -1,0 +1,13 @@
+<h1 class="page_title">We're in /categories/show</h1>
+
+<p>Currently showing Category: </p>
+<span><%= @category.inspect %></span>
+
+<p>Category Title: <strong><%= @category.name%></strong></p>
+
+<br/>
+<%= button_to link_to "Edit Me", edit_category_path(@category) %>
+<br/>
+<%= button_to "Obliterate this Category", @category, method: :delete %>
+<br/>
+<%= link_to "Categories Page", categories_path %>

@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+ .page_title {
+  background-color: darkkhaki;
+  width: max-content;
+ }
