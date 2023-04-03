@@ -1,0 +1,8 @@
+<h1>You're here in index.html.erb ng categories</h1>
+<% @categories.each do |category|%>
+  <p><%= category.inspect %></p>
+  <%= link_to "Edit Me", edit_category_path(category) %>
+  <%= button_to "Obliterate this Category", category, method: :delete %>
+<% end %>
+
+<%= link_to "Home", root_path %>

@@ -1,0 +1,10 @@
+<%= form_with(model:category) do |form| %>
+  <div>
+    <%= form.label :name %> <%# style: "display: block; font-weight:bold; text-transform: uppercase;" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
