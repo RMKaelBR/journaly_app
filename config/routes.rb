@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   patch '/categories/:id' => 'categories#update'
   delete 'categories/:id' => 'categories#destroy'
 
+  get '/bahay' => 'bahay#index'
+
   # root "categories#index"
 
   # get '/categories' => 'categories#index'
