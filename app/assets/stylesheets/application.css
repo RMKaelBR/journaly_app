@@ -18,3 +18,31 @@
   background-color: darkkhaki;
   width: max-content;
  }
+
+ .nav-bar {
+  display: flex;
+  justify-content:flex-start;
+  position:fixed;
+  left: 0px;
+  top: 0px;
+  width: calc(100vmax);
+  height: 8%;
+  /* background-color: rgb(20, 20, 20); */
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  display: flex;
+  flex-direction: row;
+ }
+
+ /* .nav-bar > ul {
+  list-style-type: none;
+ } */
+
+ .nav-bar > ul > li {
+  display: inline;
+  padding-right: 10px;
+ }
+
+ body {
+  margin-top:3em;
+  background-color:b
+ }

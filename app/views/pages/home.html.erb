@@ -1,6 +1,11 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
 
+<nav class="nav-bar">
+  <ul>
+    <li><%= link_to "The Categories", categories_path %></li>
+  </ul>
+</nav>
 
 <% if current_user %>
   <p>'Sup <%= current_user.email %>!</p>
@@ -9,8 +14,8 @@
     Successfully authenticated with a Devise account.
     The application is now ready for interaction!
   </p>
-  <%= link_to "The Categories", categories_path %>
-  <br /><br />
+  
+  <br>
   <%= link_to "Sign out", destroy_user_session_path, 'data-turbo-method': :delete %>
   
 <% else %>
