@@ -6,5 +6,4 @@ class BahayController < ApplicationController
     @categories_tasks = Category.find(@task_id)
   end
 
-  
 end

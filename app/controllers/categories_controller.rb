@@ -7,6 +7,8 @@ class CategoriesController < ApplicationController
   end
 
   def show
+    @categories = Category.by_user(current_user).pluck(:id)
+    @tasks = Task.includes(:category).where(category_id: @categories)
   end
 
   def new
