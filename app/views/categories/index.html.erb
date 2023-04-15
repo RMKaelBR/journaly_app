@@ -1,0 +1,23 @@
+<nav class="nav-bar">
+  <ul>
+    <li><%= link_to "Home", root_path %></li>
+    <li><%= link_to "Bahay", bahay_path %></li>
+  </ul>
+</nav>
+
+<body class="bodyThing">
+  <h1 class="page_title">The Categories Page</h1>
+
+  <ul>
+    <% @categories.each do |category|%>
+      <li>
+        <a href="<%= category_path(category) %>">
+          <%= category.name %>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+
+  <br/>
+  <%= button_to link_to "New Category", new_category_path %>
+</body>

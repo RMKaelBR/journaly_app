@@ -1,0 +1,39 @@
+<nav class="nav-bar">
+  <ul>
+    <li><%= link_to "Categories Page", categories_path %></li>
+  </ul>
+</nav>
+
+<p><%= @categories.inspect %></p>
+<br/>
+<p><%= @tasks.inspect %></p>
+<br/>
+<p><%= @task_id.inspect %></p>
+<br/>
+<p><%= @categories_tasks.inspect %></p>
+<br/>
+<h5>~Real View begins here~</h5>
+
+<div>
+  <% @tasks.each do |task| %>
+      <% @categories_tasks.each do |categ|%>
+          <% if categ.id == task.category_id %>
+          <ul>
+              <li>Task Name: <%= task.name %></li>
+              <li>Task Body: <%= task.body %></li>
+              <li>Belongs to Category: <%=link_to categ.name, categ, class:"text-dark text-decoration-none link-primary fw-bold text-uppercase" %></li>
+              <%#<li>(Under Construction)
+              <%#<%= button_to "Delete", task_path(task.id) , method: :delete, class:"btn btn-danger d-inline-block mb-1", style:"width: 35%; font-size: 12px;"%>
+              <%#<%= link_to "Edit", edit_task_path(task.id), class:"btn btn-danger d-inline-block mb-1", style:"width: 35%; font-size: 12px;" %>
+              <%#<%= link_to "View", task_path(task.id), class:"btn btn-danger d-block ", style:"width: 35%; font-size: 12px;" %>
+              <%#</li> %>
+          </ul>
+          <% else %>
+        
+          <% end %>
+      <% end %>
+  <% end %>
+  
+</div>
+
+<p>~End of this Page~</p>

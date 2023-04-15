@@ -1,0 +1,35 @@
+<nav class="nav-bar">
+  <ul>
+    <li><%= link_to "Categories Page", categories_path %></li>
+  </ul>
+</nav>
+
+<body>
+  <h1 class="page_title">We're in /categories/show</h1>
+
+  <p>Currently showing Category: </p>
+  <span><%= @category.inspect %></span>
+
+  <p>Category Title: <strong><%= @category.name%></strong></p>
+
+
+  <br/>
+  <%= button_to link_to "Edit Me", edit_category_path(@category) %>
+  <br/>
+  <h6>Tasks related to this Category</h6>
+  <% @tasks.each do |task| %>
+    <% if @category.id == task.category_id %></li>
+      <ul>
+        <li>Task Name: 
+          <a href="<%= task_path(task) %>">
+            <%= task.name %>
+          </a>
+        </li>
+        
+      </ul>
+    <% end %>
+  <% end %>
+  <br/>
+  <%= button_to "Obliterate this Category", @category, method: :delete %>
+  <br/>
+</body>
