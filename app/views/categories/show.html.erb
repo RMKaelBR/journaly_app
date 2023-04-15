@@ -16,20 +16,18 @@
   <br/>
   <%= button_to link_to "Edit Me", edit_category_path(@category) %>
   <br/>
-  <h6>Tasks related to this Category</h6>
+  <%= button_to "Obliterate this Category", @category, method: :delete %>
+  <h4>Tasks related to this Category</h4>
   <% @tasks.each do |task| %>
     <% if @category.id == task.category_id %></li>
       <ul>
-        <li>Task Name: 
+        <li>Task Name:
           <a href="<%= task_path(task) %>">
             <%= task.name %>
           </a>
         </li>
-        
       </ul>
     <% end %>
   <% end %>
-  <br/>
-  <%= button_to "Obliterate this Category", @category, method: :delete %>
-  <br/>
+  <%= button_to link_to "New Task", new_task_path %>
 </body>

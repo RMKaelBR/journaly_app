@@ -12,7 +12,9 @@ Rails.application.routes.draw do
 
   get '/bahay' => 'bahay#index'
 
+  get '/tasks/new' => 'tasks#new', as: 'new_task'
   get '/tasks/:id' => 'tasks#show', as: 'task'
+
   # root "categories#index"
 
   # get '/categories' => 'categories#index'
